@@ -5,6 +5,7 @@ target_link_libraries(ROSChoreonoidBridgeController ${roscpp_LIBRARIES})
 
 
 # inference
+set(Torch_DIR "$ENV{HOME}/genesis_ws/libtorch/share/cmake/Torch")
 find_package(Torch REQUIRED)
 choreonoid_add_simple_controller(InferenceController InferenceController.cpp)
 target_link_libraries(InferenceController ${CHOREONOID_BASE_LIBRARIES} "${TORCH_LIBRARIES}")

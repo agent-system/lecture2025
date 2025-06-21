@@ -1,0 +1,23 @@
+modelFile: /home/k-kojima/genesis_ws/venv_genesis/src/genesis-world/genesis/assets/urdf/go2/urdf/go2.urdf
+
+linkGroup:
+  - name: UPPER-BODY
+    links:
+      - base
+      - WAIST_R
+      - CHEST
+      - name: ARMS
+        links:
+          - name: R-ARM
+            links: [ RARM_SHOULDER_P, RARM_SHOULDER_R, RARM_SHOULDER_Y, RARM_ELBOW,
+                     RARM_WRIST_Y, RARM_WRIST_P, RARM_WRIST_R ]
+          - name: L-ARM
+            links: [ LARM_SHOULDER_P, LARM_SHOULDER_R, LARM_SHOULDER_Y, LARM_ELBOW,
+                     LARM_WRIST_Y, LARM_WRIST_P, LARM_WRIST_R ]
+  - WAIST
+  - name: LEGS
+    links:
+      - name: R-LEG
+        links: [ RLEG_HIP_R, RLEG_HIP_P, RLEG_HIP_Y, RLEG_KNEE, RLEG_ANKLE_P, RLEG_ANKLE_R ]
+      - name: L-LEG
+        links: [ LLEG_HIP_R, LLEG_HIP_P, LLEG_HIP_Y, LLEG_KNEE, LLEG_ANKLE_P, LLEG_ANKLE_R ]
